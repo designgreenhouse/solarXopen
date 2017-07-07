@@ -20,6 +20,7 @@ void loop()
 
  // check to see what the value of the A0 input is and store it in the int(heltal) variable analogvalue
  // batteryVoltage är ett flyttal som visar decimaler. Formel : batteryVoltage = A0 * 2 / 112
+ {
     analogvalue = analogRead(A0);
     temp = analogvalue*2;
     batteryVoltage = temp/112;
