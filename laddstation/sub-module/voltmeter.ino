@@ -4,7 +4,7 @@
  * This means that it will map input voltages between 0 and 5 volts into integer values between 0 and 1023. 
  * This yields a resolution between readings of: 5 volts / 1024 units or, .0049 volts (4.9 mV) per unit
  * konstant 112 is calibrated depending on resistor
- *----------------------------------------------------------------------------/
+ *----------------------------------------------------------------------------*/
  int analogvalue;
  float temp;
  float batteryVoltage;
