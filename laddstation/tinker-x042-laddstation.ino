@@ -31,7 +31,20 @@ void setup()
 
 /* This function loops forever --------------------------------------------*/
 void loop()
- {
+
+/*******************************************************************************
+ * Function Name    :   
+ * Description      :   Serie communikation med Nextion display, platshållare till värde skapas i Nextion editor
+                        och publiceras till Nextion display med 
+ * Pin Tx           :   blue         
+ * Pin  Rx          :   yellow
+ * Pin GND          :   black
+ * Pin  VIN (5V)    :   red
+ * Id               :   t0
+ * attribut         :   txt
+ ******************************************************************************/
+
+{
     Serial1.print("t0.txt=\"25.4°C\"");
     Serial1.write(0xff);
     Serial1.write(0xff);
@@ -73,18 +86,6 @@ void loop()
 }
 
 
-
-/*******************************************************************************
- * Function Name    :   
- * Description      :   Serie communikation med Nextion display, platshållare till värde skapas i Nextion editor
-                        och publiceras till Nextion display med 
- * Pin Tx           :   blue         
- * Pin  Rx          :   yellow
- * Pin GND          :   black
- * Pin  VIN (5V)    :   red
- * Id               :   t0
- * attribut         :   txt
- ******************************************************************************/
 
 /*******************************************************************************
  * Function Name  : tinkerDigitalRead
