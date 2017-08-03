@@ -2,6 +2,7 @@
 // State machine code
 
 
+
 int sensorIGenPin = A0;    // select the input pin for the generator current sensor
 int sensorIChaPin = A1;    // select the input pin for the charger current sensor
 int manual_input = 2;      // select the pin to manual mode media player
@@ -54,28 +55,6 @@ void setup() {
 
 /*
   State machine by using Switch statement
-
-  Demonstrates the use of a switch statement. The switch statement allows you
-  to choose from among a set of discrete values of a variable. It's like a
-  series of if statements.
-
-  To see this sketch in action, put the board and sensor in a well-lit room,
-  open the Serial Monitor, and move your hand gradually down over the sensor.
-
-  
-
-  - photoresistor from analog in 0 to +5V
-  - 10K resistor from analog in 0 to ground
-
-  created 1 Jul 2009
-  modified 9 Apr 2012
-  by Tom Igoe
-
-  This example code is in the public domain.
-
-
-  The circuit:
-  http://www.arduino.cc/en/Tutorial/SwitchCase
 */
 
 
@@ -189,7 +168,9 @@ void loop() {
           Serial.println("Exit Visa tre filmer i sekvens");
           break;
         }
-  delay(1000);   
+        
+  delay(1000); 
+    
       // ENTER new state actions **************************************************** ENTER STATE
       switch (state)  {
         case 0:
@@ -197,32 +178,32 @@ void loop() {
           Serial.print("Enter odokumenterat tillstånd 0, ");
           break;
         case 1:
-          // to do when exiting state
+          // to do when entering state
           Serial.print("Enter Visa Loading, ");
           break;
         case 2:
-          // to do when exiting state
+          // to do when entering state
           Serial.print("Enter odokumenterat tillstånd 2, ");
            break;
         case 3: 
-          // to do when exiting state
+          // to do when entering state
           Serial.print("Enter odokumenterat tillstånd 3, ");
           break;
         case 4: 
-          // to do when exiting state
+          // to do when entering state
           Serial.print("Enter Paus i film, ");
           break;
  
         case 5:
-          // to do when exiting state
+          // to do when entering state
           Serial.print("Enter Visa film, ");
            break;
         case 6: 
-          // to do when exiting state
+          // to do when entering state
           Serial.print("Enter Släck (paus) display, ");
           break;
         case 7: 
-          // to do when exiting state
+          // to do when entering state
           Serial.print("Enter Visa tre filmer i sekvens, ");
           break;
         }
@@ -231,38 +212,39 @@ void loop() {
     // IN state actions ********************************************************** IN STATE
     switch (state)  {
         case 0:
-          // to do when exiting state
+          // to do when in state
           Serial.print("odokumenterat tillstånd 0, ");
           break;
         case 1:
-          // to do when exiting state
+          // to do when in state
           Serial.print("Visa Loading, ");
           break;
         case 2:
-          // to do when exiting state
+          // to do when in state
           Serial.print("odokumenterat tillstånd 2, ");
            break;
         case 3: 
-          // to do when exiting state
+          // to do when in state
           Serial.print("odokumenterat tillstånd 3, ");
           break;
         case 4: 
-          // to do when exiting state
+          // to do when in state
           Serial.print("Paus i film, ");
           break;
         case 5:
-          // to do when exiting state
+          // to do when in state
           Serial.print("Visa film, ");
            break;
         case 6: 
-          // to do when exiting state
+          // to do when in state
           Serial.print("Släck (paus) display, ");
           break;
         case 7: 
-          // to do when exiting state
+          // to do when in state
           Serial.print("Visa tre filmer i sekvens, ");
           break;
       }
       return state;
      }
 
+        
